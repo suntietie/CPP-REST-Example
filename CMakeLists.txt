@@ -39,7 +39,7 @@ set(SOURCE_FILES src/main/main.cpp)
 set(LIBRARY_NAME cpplib)
 
 find_package(cpprestsdk REQUIRED)
-find_package(OpenSSL REQUIRED)
+find_package(openssl REQUIRED)
 
 # Where any include files are
 include_directories(src/lib)

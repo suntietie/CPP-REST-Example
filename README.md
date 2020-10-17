@@ -11,7 +11,7 @@ steps for mac OS:
 2. `brew install cpprestsdk`
 3. open Project in VS Code
 4. `cmake .`
-5. This will create a subfolder called `build`. Once you do this, a new button on the left `Activity Bar` in Visual Studio Code will appear which allows you to run and debug the targets.
+5. `./build/cppstarter`
 
 
 Features:
