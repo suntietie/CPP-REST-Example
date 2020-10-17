@@ -1,0 +1,7 @@
+CMakeSettings.json
+Makefile
+/build
+CMakeFiles
+/.vscode
+cmake_install.cmake
+CMAkeCache.txt
