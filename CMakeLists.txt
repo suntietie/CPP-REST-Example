@@ -33,7 +33,7 @@ else()
 endif()
 
 # Any source files in this directory
-set(SOURCE_FILES src/main/main.cpp)
+set(SOURCE_FILES src/main/start.cpp src/main/catchjson.cpp)
 
 
 set(LIBRARY_NAME cpplib)
