@@ -22,7 +22,7 @@ USC EE 599 - Computing Principles for Electrical Engineers, fall 2020.
    - cmake-format
 5. Command + Shift + P and type `CMake: Configure`
 6. This will create a subfolder called `build`. Once you do this, a new button on the left `Activity Bar` in Visual Studio Code will appear which allows you to run and debug the targets.
-
+![step6](step6.png)
 
 If you are in different OS, please refer to this [link](https://github.com/microsoft/cpprestsdk) to install packages, and from step 3 will be the same.
 
