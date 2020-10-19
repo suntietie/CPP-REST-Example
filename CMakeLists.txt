@@ -33,7 +33,7 @@ else()
 endif()
 
 # Any source files in this directory
-set(SOURCE_FILES src/main/start.cpp src/main/catchjson.cpp)
+# set(SOURCE_FILES src/main/save.cpp)
 
 
 set(LIBRARY_NAME cpplib)
@@ -50,7 +50,13 @@ add_subdirectory(src/tests)
 
 
 # Name of executable
-add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+# add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+add_executable(start src/main/start.cpp)
+add_executable(parse src/main/parse.cpp)
+add_executable(save src/main/save.cpp)
 
 # Link
-target_link_libraries(${PROJECT_NAME} cpplib cpprestsdk::cpprest)
+# target_link_libraries(${PROJECT_NAME} cpplib cpprestsdk::cpprest)
+target_link_libraries(start cpplib cpprestsdk::cpprest)
+target_link_libraries(parse cpplib cpprestsdk::cpprest)
+target_link_libraries(save cpplib cpprestsdk::cpprest)

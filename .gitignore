@@ -5,3 +5,5 @@ CMakeFiles
 /.vscode
 cmake_install.cmake
 CMAkeCache.txt
+results.html
+results.json

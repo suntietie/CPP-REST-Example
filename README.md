@@ -1,11 +1,12 @@
 # C++ Project Template for CMake
 
+USC EE 599 - Computing Principles for Electrical Engineers, fall 2020. 
+
 > Can be used in Visual Studio Code
 
 Skeleton Code for cmake usage and cpprestsdk.
 
 Steps for mac OS:
-
 
 1. `brew install cmake`
 2. `brew install cpprestsdk`
@@ -16,6 +17,11 @@ Steps for mac OS:
    - cmake-format
 5. Command + Shift + P and type `CMake: Configure`
 6. This will create a subfolder called `build`. Once you do this, a new button on the left `Activity Bar` in Visual Studio Code will appear which allows you to run and debug the targets.
-7. `./build/cppstarter`
+
 
 If you are in different OS, please refer to this [link](https://github.com/microsoft/cpprestsdk) to install packages, and cmake steps will be the same.
+
+## Run Code
+`./build/start`
+`./build/parse`
+`./build/save`
