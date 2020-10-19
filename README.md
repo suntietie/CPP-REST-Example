@@ -13,15 +13,12 @@ USC EE 599 - Computing Principles for Electrical Engineers, fall 2020.
 * [Alpha Vantage](https://www.alphavantage.co/documentation/) - free to register an API key
 ## Steps for MAC OS:
 
-1. `brew install cmake`
-2. `brew install cpprestsdk`
+1. install [homebrew](https://brew.sh/)
+2. `brew install cmake openssl cpprestsdk`
 3. open Project in VS Code
-4. install VSCode extensions:
-   - [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
-   - CMake
-   - cmake-format
+4. install VSCode extensions: [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools), CMake, cmake-format
 5. Optional: If CMake let you to choose CPP Compiler, pick Clang.
-6. Command + Shift + P and type `CMake: Configure`
+6. [Command + Shift + P] and type `CMake: Configure`
 7. This will create a subfolder called `build`. Once you do this, a new button on the left `Activity Bar` in Visual Studio Code will appear which allows you to run and debug the targets.
 <img src="build.png" alt="build" width="200"/>
 
