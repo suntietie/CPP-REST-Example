@@ -37,7 +37,7 @@ int main() {
 		return jsonObject[U("Meta Data")];
 	})
  
-	// Parse the user details.
+	// Parse the JSON details.
 	.then([](json::value jsonObject) {
 		std::cout << "------ Extract my JSON -------" <<std::endl;
 		std::cout << jsonObject[U("1. Information")].as_string()
