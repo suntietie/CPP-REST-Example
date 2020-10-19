@@ -19,7 +19,7 @@ int main() {
 				.append_query(U("function"), "TIME_SERIES_INTRADAY")
 				.append_query(U("symbol"), "IBM")
 				.append_query(U("interval"), "5min")
-				.append_query(U("apikey"), "OHNW2EEFHVBXC4IK").to_string())
+				.append_query(U("apikey"), "demo").to_string())
  
 	// Get the response.
 	.then([](http_response response) {
