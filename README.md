@@ -23,7 +23,7 @@ USC EE 599 - Computing Principles for Electrical Engineers, fall 2020.
 5. Optional: If CMake let you to choose CPP Compiler, pick Clang.
 6. Command + Shift + P and type `CMake: Configure`
 7. This will create a subfolder called `build`. Once you do this, a new button on the left `Activity Bar` in Visual Studio Code will appear which allows you to run and debug the targets.
-![build](build.png)
+<img src="build.png" alt="build" width="200"/>
 
 If you are in different OS, please refer to this [link](https://github.com/microsoft/cpprestsdk) to install packages, and from step 3 will be the same.
 
