@@ -29,4 +29,4 @@ If you are in different OS, please refer to this [link](https://github.com/micro
 `./build/start` : save a results html file.\
 `./build/parse` : parse JSON file from alpha vantage API.\
 `./build/save` : save JSON from website, and parse it using JSON library provided by cpprestsdk library. 
-
+`./build/plot` : call [matplotlib-cpp](https://github.com/lava/matplotlib-cpp), a C++ interface of python library, to draw useful figures
