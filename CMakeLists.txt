@@ -2,9 +2,9 @@
 cmake_minimum_required(VERSION 3.17.3)
 
 # Project name
-project(cppstarter)
+project(cppstarter CXX)
 
-# Build for C++20 if we can
+# Build for C++11 if we can
 set(CMAKE_CXX_STANDARD 11)
 
 # Turn on any compiler-specific flags
@@ -37,15 +37,18 @@ endif()
 
 
 set(LIBRARY_NAME cpplib)
+set(LIBRARY_NAME plotlib)
 
 find_package(cpprestsdk REQUIRED)
-find_package(openssl REQUIRED)
+# find_package(openssl REQUIRED)
 
 # Where any include files are
 include_directories(src/lib)
+include_directories(src/plotlib)
 
 # Subdirectories to build
 add_subdirectory(src/lib)
+add_subdirectory(src/plotlib)
 add_subdirectory(src/tests)
 
 
@@ -54,9 +57,13 @@ add_subdirectory(src/tests)
 add_executable(start src/main/start.cpp)
 add_executable(parse src/main/parse.cpp)
 add_executable(save src/main/save.cpp)
+add_executable(plot src/main/plot.cpp)
+
 
 # Link
 # target_link_libraries(${PROJECT_NAME} cpplib cpprestsdk::cpprest)
 target_link_libraries(start cpplib cpprestsdk::cpprest)
 target_link_libraries(parse cpplib cpprestsdk::cpprest)
 target_link_libraries(save cpplib cpprestsdk::cpprest)
+
+target_link_libraries(plot plotlib cpprestsdk::cpprest)
