@@ -30,3 +30,7 @@ If you are in different OS, please refer to this [link](https://github.com/micro
 `./build/parse` : parse JSON file from alpha vantage API.\
 `./build/save` : save JSON from website, and parse it using JSON library provided by cpprestsdk library. 
 `./build/plot` : call [matplotlib-cpp](https://github.com/lava/matplotlib-cpp), a C++ interface of python library, to draw useful figures
+
+## Reference
+
+Thankful for the [repo](https://github.com/ourarash/cmake-catch-vsc-template) and [video](https://www.youtube.com/watch?v=OXwsD37qHPY&feature=youtu.be) created by [ourarash](https://github.com/ourarash).
