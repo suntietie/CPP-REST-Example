@@ -11,7 +11,12 @@
 
 using namespace web;
 
+// get and write JSON FILE
+// please refer to src/main/save.cpp
+
+
 json::value readJsonFile(std::string const & jsonFileName)
+    // read JSON FILE
 {
     json::value output;  // JSON read from input file
 
@@ -36,6 +41,7 @@ json::value readJsonFile(std::string const & jsonFileName)
 
     return output;
 }
+
 
 Data& parseJSON(json::value jsonObject){
     // parse your JSON Object into Data
