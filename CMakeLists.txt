@@ -61,7 +61,6 @@ add_subdirectory(src/tests)
 
 
 # Name of executable
-# add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 add_executable(start src/main/start.cpp)
 add_executable(parse src/main/parse.cpp)
 add_executable(save src/main/save.cpp)
@@ -69,7 +68,6 @@ add_executable(plot src/main/plot.cpp)
 
 
 # Link
-# target_link_libraries(${PROJECT_NAME} cpplib cpprestsdk::cpprest)
 if(APPLE)
 target_link_libraries(start cpplib cpprestsdk::cpprest)
 target_link_libraries(parse cpplib cpprestsdk::cpprest)
