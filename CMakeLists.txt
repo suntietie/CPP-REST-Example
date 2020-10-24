@@ -1,5 +1,5 @@
-# Require CMAKE 3.1 or higher
-cmake_minimum_required(VERSION 3.17.3)
+# Require CMAKE 3.9 or higher
+cmake_minimum_required(VERSION 3.9)
 
 # Project name
 project(cppstarter CXX)
@@ -39,8 +39,16 @@ endif()
 set(LIBRARY_NAME cpplib)
 set(LIBRARY_NAME plotlib)
 
+if(APPLE)
 find_package(cpprestsdk REQUIRED)
 # find_package(openssl REQUIRED)
+endif()
+
+if(UNIX)
+set(cpprestsdk_DIR /usr/lib/${CMAKE_LIBRARY_ARCHITECTURE}/cmake)
+find_package(cpprestsdk REQUIRED)
+find_package(Boost REQUIRED system)
+endif()
 
 # Where any include files are
 include_directories(src/lib)
@@ -62,8 +70,16 @@ add_executable(plot src/main/plot.cpp)
 
 # Link
 # target_link_libraries(${PROJECT_NAME} cpplib cpprestsdk::cpprest)
+if(APPLE)
 target_link_libraries(start cpplib cpprestsdk::cpprest)
 target_link_libraries(parse cpplib cpprestsdk::cpprest)
 target_link_libraries(save cpplib cpprestsdk::cpprest)
-
 target_link_libraries(plot plotlib cpprestsdk::cpprest)
+endif()
+
+if(UNIX)
+target_link_libraries(start cpprestsdk::cpprest ${Boost_SYSTEM_LIBRARY})
+target_link_libraries(parse cpplib cpprestsdk::cpprest ${Boost_SYSTEM_LIBRARY})
+target_link_libraries(save cpplib cpprestsdk::cpprest ${Boost_SYSTEM_LIBRARY})
+target_link_libraries(plot plotlib cpprestsdk::cpprest ${Boost_SYSTEM_LIBRARY})
+endif()

@@ -31,7 +31,7 @@ json::value readJsonFile(std::string const & jsonFileName)
     }
     catch (json::json_exception excep)
     {
-        throw json::json_exception("Error Parsing JSON file " + jsonFileName);
+        throw json::json_exception("Error Parsing JSON file ");
     }
 
     return output;
