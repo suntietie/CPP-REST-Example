@@ -24,7 +24,8 @@ USC EE 599 - Computing Principles for Electrical Engineers, fall 2020.
 
 
 ## Steps for Linux Ubuntu 18.04:
-1. install packages: `sudo snap install cmake --classic``sudo apt-get install libcpprest-dev clang python2.7-dev`
+1. install packages: `sudo snap install cmake --classic`\
+`sudo apt-get install libcpprest-dev clang python2.7-dev`
 2. open Project in VS Code
 3. install VSCode extensions: [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools), CMake, cmake-format
 4. Optional: If CMake let you to choose CPP Compiler, pick Clang.
