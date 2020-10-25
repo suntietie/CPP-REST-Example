@@ -29,6 +29,11 @@ struct Signal{
 
 };
 
+class Signals{
+    public:
+        std::vector<Signal> d;
+        std::string method;
+};
 
 class Data{
     /* 

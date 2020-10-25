@@ -1,5 +1,5 @@
 /*
- *  json.h for stock project 
+ *  json.hpp for stock project 
  *  USC EE 599: Computing Principles for Electrical Engineers - Fall 2020
  *  ----------------------------------------------------------
  */

@@ -7,24 +7,35 @@
 
 #include "data.h"
 #include "algorithm.h"
+#include <set>
 #include <unordered_map>
 
 
 class Analysis{
     public:
 
-        double simpleBackTesting(std::vector<Signal>& sig, Data& d);
+        double simpleBackTesting(Signals& sig, Data& d);
         // evaluate how often your simple backtesting is profitable
         // e.g. a BUY signal is shown at any timestamp, and stock price 
         // get higher after your BUY signal
-        // return (# of correct signals) / (# of trading days)
+        // return accuracy of signal (# of correct signals) / (# of signals)
 
         
-        double complexBackTesting(std::vector<std::vector<Signal>>& sigs, Data& d);
+        double complexBackTesting(std::vector<Signals>& sigs, Data& d);
         // evaluate how often your complex backtesting is profitable
+
         // e.g. a BUY signal is shown by mulptiple signals very nearly 
-        // (you define near), and stock price get higher after your BUY signal
-        // return (# of correct signals) / (# of trading days)
+        // (you define near), and stock price goes higher after your BUY signal
+        // SELL if  RSI == SELL AND MACD == SELL AND Data Signal == SELL
+
+        // return accuracy of signal (# of correct signals) / (# of signals)
+
+        std::vector<std::set<std::string>> TopAccuracy(std::vector<Signals>& sigs, Data& d, int N);
+        // Make a full combination of all simple backtesting methods.
+        
+        // evaluate the top n highest accuracy for different methods of complex backtesting
+        // use heap data structure to get the top n! 
+        // e.g. return { {RSI, MACD}, {Simp_Mov_Average, RSI}, ... }
 
 
    

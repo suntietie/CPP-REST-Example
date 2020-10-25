@@ -1,42 +1,18 @@
+#pragma once
+
 #include <iostream>
 #include <cpprest/http_client.h>
 #include <cpprest/filestream.h>
 #include <cpprest/uri.h>
 #include <cpprest/json.h>
- 
+#include "json.hpp"
+
 using namespace utility;
 using namespace web;
 using namespace web::http;
 using namespace web::http::client;
 using namespace concurrency::streams;
  
-
-json::value readJsonFile(std::string const & jsonFileName)
-{
-    json::value output;  // JSON read from input file
-
-    try
-    {
-        // Open the file stream
-        std::ifstream f(jsonFileName);
-        // String stream for holding the JSON file
-        std::stringstream strStream;
-
-        // Stream file stream into string stream
-        strStream << f.rdbuf();
-        f.close();  // Close the filestream
-
-        // Parse the string stream into a JSON object
-        output = json::value::parse(strStream);
-    }
-    catch (json::json_exception excep)
-    {
-        throw json::json_exception("Error Parsing JSON file ");
-    }
-
-    return output;
-}
-
 
 int main() {
 
