@@ -15,4 +15,10 @@ set(SOURCE_FILES
 )
 
 add_library(cpplib ${SOURCE_FILES} ${HEADER_FILES})
+if(APPLE)
 target_link_libraries(cpplib cpprestsdk::cpprest)
+endif()
+
+if(UNIX)
+target_link_libraries(cpplib cpprestsdk::cpprest ${Boost_SYSTEM_LIBRARY})
+endif()
