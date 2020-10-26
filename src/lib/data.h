@@ -33,6 +33,8 @@ class Signals{
     public:
         std::vector<Signal> d;
         std::string method;
+        std::time_t start_time;
+        std::map<std::string, std::string> metadata;
 };
 
 class Data{

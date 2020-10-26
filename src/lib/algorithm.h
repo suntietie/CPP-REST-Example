@@ -11,12 +11,13 @@
 class Algorithm{
     public:
         Algorithm(){};
+        // abstract class
         // generate buy or sell signals for a stock time series data 
-        virtual std::vector<Signal> apply(Data& , int indicator) = 0;
+        virtual Signals apply(Data& , int indicator) = 0;
 };
 
 class Simp_Mov_Average: Algorithm{
-
+    // derived class, please implement the "apply" function
 };
 
 class Exp_Mov_Average: Algorithm{
