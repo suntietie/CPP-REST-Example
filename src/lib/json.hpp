@@ -14,11 +14,10 @@ using namespace web;
 // get and write JSON FILE
 // please refer to src/main/save.cpp
 
-
-json::value readJsonFile(std::string const & jsonFileName)
-    // read JSON FILE
+json::value readJsonFile(std::string const &jsonFileName)
+// read JSON FILE
 {
-    json::value output;  // JSON read from input file
+    json::value output; // JSON read from input file
 
     try
     {
@@ -29,7 +28,7 @@ json::value readJsonFile(std::string const & jsonFileName)
 
         // Stream file stream into string stream
         strStream << f.rdbuf();
-        f.close();  // Close the filestream
+        f.close(); // Close the filestream
 
         // Parse the string stream into a JSON object
         output = json::value::parse(strStream);
@@ -42,9 +41,7 @@ json::value readJsonFile(std::string const & jsonFileName)
     return output;
 }
 
-
-Data& parseJSON(json::value jsonObject){
+Data &parseJSON(json::value jsonObject)
+{
     // parse your JSON Object into Data
-
 }
-

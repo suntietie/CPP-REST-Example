@@ -7,28 +7,28 @@
 
 #include "data.h"
 
-
-class Algorithm{
-    public:
-        Algorithm(){};
-        // abstract class
-        // generate buy or sell signals for a stock time series data 
-        virtual Signals apply(Data& , int indicator) = 0;
+class Algorithm
+{
+public:
+    Algorithm(){};
+    // abstract class
+    // generate buy or sell signals for a stock time series data
+    virtual Signals apply(Data &, int indicator) = 0;
 };
 
-class Simp_Mov_Average: Algorithm{
+class Simp_Mov_Average : Algorithm
+{
     // derived class, please implement the "apply" function
 };
 
-class Exp_Mov_Average: Algorithm{
-
+class Exp_Mov_Average : Algorithm
+{
 };
 
-class RSI: Algorithm{
-
+class RSI : Algorithm
+{
 };
 
-class MACD: Algorithm{
-
+class MACD : Algorithm
+{
 };
-

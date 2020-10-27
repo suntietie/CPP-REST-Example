@@ -42,7 +42,7 @@ public:
     // define input parameters by yourself
 
     double maxProfit(Data &d, int numOfShare);
-    // In this step, say you have a daily time series(vector<DataPoint>) of S&P 500, with the length of 3 - 6 months. 
+    // In this step, say you have a daily time series(vector<DataPoint>) of S&P 500, with the length of 3 - 6 months.
     // Try to design an algorithm that can make you get the highest profit. Restrictions on your transactions are:
 
     // For every transaction, you are only able to sell or  buy 1000 shares of stocks.

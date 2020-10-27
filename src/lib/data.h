@@ -5,12 +5,13 @@
  */
 #pragma once
 
-# include <vector> 
-# include <string>
-# include <map>
-# include <ctime>
+#include <vector>
+#include <string>
+#include <map>
+#include <ctime>
 
-struct DataPoint{
+struct DataPoint
+{
 
     double openPrice;
     double closePrice;
@@ -20,42 +21,44 @@ struct DataPoint{
     std::time_t timestamp;
 };
 
-struct Signal{
+struct Signal
+{
 
     int s;
     // s = 0 - BUY Signal
     // s = 1 - SELL Signal
     std::time_t timestamp;
-
 };
 
-class Signals{
-    public:
-        std::vector<Signal> d;
-        std::string method;
-        std::time_t start_time;
-        std::map<std::string, std::string> metadata;
+class Signals
+{
+public:
+    std::vector<Signal> d;
+    std::string method;
+    std::time_t start_time;
+    std::map<std::string, std::string> metadata;
 };
 
-class Data{
+class Data
+{
     /* 
      * Stock data series
      */
-    public:
-        Data(){};
-        ~Data(){};
-        // getter function
-        std::vector<DataPoint> getData();
-        // setter function
-        void setData(std::vector<DataPoint>& );
-        
-        // merge data with same metadata, with correct timestamps
-        Data merge(Data& );
-        // start time of stock data
-        std::time_t start_time;
-        // metadata 
-        std::map<std::string, std::string> metadata;
-    private:
-        std::vector<DataPoint> d;
-        
+public:
+    Data(){};
+    ~Data(){};
+    // getter function
+    std::vector<DataPoint> getData();
+    // setter function
+    void setData(std::vector<DataPoint> &);
+
+    // merge data with same metadata, with correct timestamps
+    Data merge(Data &);
+    // start time of stock data
+    std::time_t start_time;
+    // metadata
+    std::map<std::string, std::string> metadata;
+
+private:
+    std::vector<DataPoint> d;
 };
